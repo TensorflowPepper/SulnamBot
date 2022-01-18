@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '6.0.0'
+}
+
+mainClassName = 'io.github.tensorflowpepper.sulmc.Main'
+version '1.0'
+
+repositories {
+    maven {
+        name 'm2-dv8tion'
+        url 'https://m2.dv8tion.net/releases'
+    }
+    mavenCentral()
+    jcenter()
+    google()
+    maven {
+        name 'jfrog-duncte123'
+        url 'https://duncte123.jfrog.io/artifactory/maven'
+    }
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-api:1.7.21'
+    implementation 'net.dv8tion:JDA:4.4.0_352'
+    implementation 'com.jagrosh:jda-utilities:3.0.5'
+    implementation 'me.duncte123:botCommons:2.3.9'
+}
+
+compileJava.options.encoding = 'UTF-8'
