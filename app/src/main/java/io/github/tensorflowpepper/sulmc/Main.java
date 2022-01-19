@@ -10,13 +10,13 @@ import javax.security.auth.login.LoginException;
 public class Main {
 
     private Main() throws LoginException {
-        JDA jda = JDABuilder.createDefault("")
-                .setActivity(Activity.watching("/서버확인"))
+        JDA jda = JDABuilder.createDefault("OTMyODUwODQzNTU0ODExOTc0.YeY_DA.OKxtDUBnY7r0ROPzoFgxG-b2Lfw")
+                .setActivity(Activity.listening("/checkserver"))
                 .setStatus(OnlineStatus.IDLE)
                 .addEventListeners(new Command())
                 .build();
 
-        jda.upsertCommand("checkserver", "Checks the Server Status.");
+        jda.upsertCommand("checkserver", "Checks the Server Status.").queue();
     }
 
     public static void main(String[] args) throws LoginException {
