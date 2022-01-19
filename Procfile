@@ -1,1 +1,1 @@
-Worker: java srv/main/java/io/github/tensorflowpepper/sulmc/Main.java
+Worker: java src/main/java/io/github/tensorflowpepper/sulmc/Main.java
