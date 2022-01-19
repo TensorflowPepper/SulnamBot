@@ -10,7 +10,7 @@ import javax.security.auth.login.LoginException;
 public class Main {
 
     private Main() throws LoginException {
-        JDA jda = JDABuilder.createDefault("OTMyODUwODQzNTU0ODExOTc0.YeY_DA.OKxtDUBnY7r0ROPzoFgxG-b2Lfw")
+        JDA jda = JDABuilder.createDefault(System.getenv("TOKEN"))
                 .setActivity(Activity.listening("/checkserver"))
                 .setStatus(OnlineStatus.IDLE)
                 .addEventListeners(new Command())
